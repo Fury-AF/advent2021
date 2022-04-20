@@ -1,5 +1,6 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.Arrays;
 
 public class Day1 {
@@ -18,7 +19,7 @@ public class Day1 {
         """;
 
         try {
-            BufferedReader br = new BufferedReader(new FileReader("inputs/input-day1a.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("/Users/antalferencgeza/Documents/Szoftver fejlesztés/AsztaliAlk/Java_alapok másolat/AsztaliAlkSZF1 /src/Advent2021/Source.txt"));
 
             int countIncrease = 0;
             int[] lastNumbers = new int[3];
@@ -58,7 +59,7 @@ public class Day1 {
                 }
             }
             System.out.println(countIncrease);
-        } catch (Exception e) {
+        } catch (IOException | NumberFormatException e) {
             e.printStackTrace();
         }
     }
